@@ -10,15 +10,22 @@
     --success:    #16a667;
     --warning:    #dfcd16;
     --danger:     #ed2b09;
+    /* FONT COLOR */
+    --dark_text : #212529;
+    --light_font_color : #8b8b8b;
+    /* FONT SIZE */
+    --sec_title_font_size: 50px;
 }
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: var(--regular_fs);
-	color: var(--color_text);
-    line-height: 30px;
+	color: var(--light_font_color);
 }
 a {
     text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark_text);
 }
 .bg-dark {
     background-color: var(--dark) !important;
@@ -30,8 +37,44 @@ a {
     background-color: var(--primary);
     border-color: var(--primary)
 }
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--primary);
+    border-color: var(--primary)
+}
+.btn-primary:focus {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+    box-shadow: 0 0 0 0.25rem rgb(226 24 55 / 19%);
+}
 
+.light_font_color {
+    color: var(--light_font_color);
+}
 
+.sec_pad_top {
+    padding-top: 80px;
+}
+.sec_pad_bottom {
+    padding-bottom: 80px;
+}
+.sec_title {
+    font-size: var(--sec_title_font_size);
+    font-weight: 800;
+}
+.scale {
+    overflow: hidden;
+}
+.scale img {
+    width: 100%;
+}
+@media(max-width: 767px) {
+    .scale img {
+        width: 100%;
+        height: 24px;
+        object-fit: cover;
+    }
+}
 /* HEADER TOP */
 .navbar-toggler {
     padding: 0;
@@ -107,7 +150,7 @@ a {
         display: none;
     }
     .header_top .header_top_wrap a.navbar_brand img {
-        height: 55px;
+        height: 40px;
     }
     .request_quote {
         display: none;
@@ -129,5 +172,270 @@ a {
     }
     .navbar-toggler {
         margin-left: 0;
+    }
+}
+
+
+/* HERO BANNER SCTION CSS START FROM HERE */
+.hero_banner {
+    overflow: hidden;
+    position: relative;
+}
+.hero_banner .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hero_banner .logo img {
+    max-width: 557px;
+    width: 100%;
+}
+.hero_banner_img {
+    height: 100%;
+}
+.hero_banner .hero_banner_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* ABOUT SECTION STYLE HERE */
+.about_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about_card {
+    border: 1px solid #cbcbcb;
+    padding: 42.5px 30px;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    height: 293px;
+}
+.about_card img {
+    margin-bottom: 15px;
+}
+.about_card h5 {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+
+
+/* SERVICE SECTION DESIGN HERE */
+.service_card img {
+    aspect-ratio: 15/10;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.service_card .content {
+    padding-top: 24px;
+}
+.service_card .content a:hover h5 {
+    color: var(--primary);
+}
+
+
+/* COUNT SECTION */
+.counts {
+    background: var(--primary);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.counts .count_item {
+    text-align: center;
+}
+.counts .count_item img {
+    height: 50px;
+    margin-bottom: 15px;
+}
+.counts .count_item h5 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+.counts .count_item p {
+    color: #fff;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+/* OUR WORK SECTION */
+.work_card {
+    position: relative;
+}
+.work_card .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0000008a;
+    transform: scale(0.0);
+    transition: .3s;
+}
+.work_card:hover .overlay {
+    transform: scale(1);
+}
+.work_card .overlay h5 {
+    font-weight: 700;
+}
+.work_card .overlay h5 a {
+    color: #fff;
+}
+.work_card .overlay h5 a:hover {
+    color: var(--primary);
+}
+.work_card img {
+    aspect-ratio: 15/12;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TESTIMONIALS SECTION */
+.testimonials_sec {
+    position: relative;
+    z-index: 1;
+}
+.testimonials_sec:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .7;
+    z-index: -1;
+}
+.testimonials_slider .testimonials_item {
+    text-align: center;
+    max-width: 70%;
+    margin: 0 auto;
+}
+.testimonials_slider .testimonials_item img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+}
+.testimonials_slider .testimonials_item .user_nm {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 19px;
+    line-height: 1;
+}
+.testimonials_slider .testimonials_item .user_nm .designation {
+    color: var(--primary);
+    font-weight: 700;
+}
+.testimonials_slider .testimonials_item p {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.owl-carousel .owl-dots {
+    margin-top: 30px;
+    text-align: center;
+}
+.owl-carousel button.owl-dot {
+    background: transparent;
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+    border: 1px solid #fff;
+}
+.owl-carousel button.owl-dot.active {
+    background: var(--primary);
+}
+
+
+/* WHATS NEW SECTION */
+.whats_new {
+    background: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+.whats_new h5 a {
+    color: var(--dark_text);
+}
+.whats_new h5 a:hover {
+    color: var(--primary);
+}
+.whats_new img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 15/10;
+    margin-bottom: 15px;
+}
+.whats_new p {
+    margin-bottom: 0;
+}
+
+
+/* FOOTER */
+footer {
+    background: #1a1a1a;
+}
+footer .f_brand img {
+    height: 80px;
+    width: auto;
+}
+footer .f_links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    flex-flow: wrap;
+}
+footer .f_links a {
+    color: #fff;
+    padding: 0 12px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+footer .f_links a:hover {
+    color: var(--primary);
+}
+
+.footer_bottom {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
+@media(max-width: 1600px) {
+    :root {
+        --sec_title_font_size: 38px;
+    }
+}
+@media(max-width: 500px) {
+    :root {
+        --sec_title_font_size: 34px;
+    }
+    footer .f_links a {
+        padding: 5px 12px;
+    }
+    .testimonials_slider .testimonials_item {
+        max-width: 100%;
     }
 }
