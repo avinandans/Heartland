@@ -18,7 +18,7 @@
 		--regular_fs: 14px;
 	}
 	body {
-		line-height: 26px;
+		/* line-height: 26px; */
 	}
 	.navbar-light .navbar-brand {
 		width: 20%;
