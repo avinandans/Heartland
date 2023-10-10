@@ -140,6 +140,7 @@ h1, h2, h3, h4, h5, h6 {
 .header_top .header_top_wrap .left_sec .ph_sec .content .phNumberTitle {
     font-weight: 600;
     margin-bottom: 6px;
+    color: var(--dark_text);
 }
 .header_top .header_top_wrap .left_sec .ph_sec .content a.phNumber {
     color: #767676;
