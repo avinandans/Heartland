@@ -124,26 +124,26 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     margin-left: auto;
 }
-.header_top .header_top_wrap .left_sec .ph_sec {
+.header_top .header_top_wrap .left_sec .ph_sec a {
     display: flex;
     align-items: center;
     margin-right: 30px;
 }
-.header_top .header_top_wrap .left_sec .ph_sec img {
+.header_top .header_top_wrap .left_sec .ph_sec a img {
     height: 32px;
 }
-.header_top .header_top_wrap .left_sec .ph_sec .content {
+.header_top .header_top_wrap .left_sec .ph_sec a .content {
     display: flex;
     flex-flow: column;
     line-height: 1;
     margin-left: 15px;
 }
-.header_top .header_top_wrap .left_sec .ph_sec .content .phNumberTitle {
+.header_top .header_top_wrap .left_sec .ph_sec a .content .phNumberTitle {
     font-weight: 600;
     margin-bottom: 6px;
     color: var(--dark_text);
 }
-.header_top .header_top_wrap .left_sec .ph_sec .content a.phNumber {
+.header_top .header_top_wrap .left_sec .ph_sec a .content .phNumber {
     color: #767676;
 }
 
@@ -177,7 +177,7 @@ h1, h2, h3, h4, h5, h6 {
         height: 40px;
     }
     .navbar-expand-lg .navbar-nav .nav-link {
-        padding: 0.4rem 1.2rem;
+        padding: 0.4rem 0;
     }
     .navbar-toggler {
         margin-left: 0;
@@ -508,12 +508,19 @@ footer .f_links a:hover {
 }
 @media(max-width: 768px) {
     .container {
-        max-width: 90%;
+        max-width: 95%;
     }
-    .header_top .header_top_wrap .left_sec .ph_sec img {
+    .header_top .header_top_wrap .left_sec .ph_sec a {
+        align-items: center;
+        justify-content: center;
+        margin-right: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .header_top .header_top_wrap .left_sec .ph_sec a img {
         height: 20px;
     }
-    .header_top .header_top_wrap .left_sec .ph_sec .content {
+    .header_top .header_top_wrap .left_sec .ph_sec a .content {
         display: none;
     }
     .header_top .header_top_wrap .left_sec .ph_sec {
@@ -527,6 +534,11 @@ footer .f_links a:hover {
     }
     .request_quote {
         display: none;
+    }
+    .hero_banner_2 .hero_slider .hero_item {
+        min-height: 650px;
+        height: auto;
+        padding: 50px 0;
     }
 }
 @media(max-width: 500px) {
